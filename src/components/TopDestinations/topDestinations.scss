@@ -1,0 +1,31 @@
+.destinations-wrapper {
+  margin: 10rem 0;
+
+  @media screen and (max-width: 500px) {
+    margin: 6rem 0;
+  }
+}
+
+.destinations {
+  grid-column: center-start / center-end;
+  margin: 8rem 0;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 4rem;
+
+  @media screen and (max-width: 1080px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: 1020px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media screen and (max-width: 500px) {
+    grid-column: full-start / full-end;
+    margin: 4rem 2rem;
+  }
+
+}

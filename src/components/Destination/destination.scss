@@ -1,0 +1,74 @@
+.destination {
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0;
+  border-radius: .5rem;
+  position: relative;
+
+  &__img {
+    height: 25rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: .4rem;
+  }
+
+  &__title {
+    position: absolute;
+    color: #fff;
+    display: inline-block;
+    font-size: 24px;
+    line-height: 24px;
+    bottom: 12px;
+    left: 12px;
+    z-index: 10;
+
+    @media only screen and (max-width: 1050px) {
+      font-size: 1.9rem;
+    }
+
+    @media only screen and (max-width: 675px) {
+      font-size: 2rem;
+    }
+
+    @media only screen and (max-width: 350px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__deals {
+    position: absolute;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    bottom: 12px;
+    right: 12px;
+    z-index: 10;
+  }
+
+  &__img-overlay {
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, .7) 100%);
+    border-radius: .4rem;
+  }
+
+  &__discount {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: #fff;
+    background: var(--primaryColor);
+    padding: 8px 14px;
+    border-radius: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    letter-spacing: 1.3px;
+  }
+
+}
