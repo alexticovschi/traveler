@@ -3,6 +3,8 @@ import Layout from "../components/Layout/Layout"
 import StyledHero from "../components/StyledHero"
 import Banner from "../components/Banner/Banner"
 import TopDestinations from "../components/TopDestinations/TopDestinations"
+import DealsAndSavings from "../components/DealsAndSavings/DealsAndSavings"
+
 import { graphql } from "gatsby"
 import SEO from "../components/SEO"
 
@@ -32,6 +34,7 @@ const deals = ({ data }) => {
         ></Banner>
       </StyledHero>
       <TopDestinations />
+      <DealsAndSavings />
     </Layout>
   )
 }

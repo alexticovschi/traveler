@@ -23,6 +23,11 @@ const SideDrawer = ({ show }) => {
           </AniLink>
         </li>
         <li>
+          <AniLink fade to="/deals">
+            Deals
+          </AniLink>
+        </li>
+        <li>
           <AniLink fade to="/blog">
             Blog
           </AniLink>
