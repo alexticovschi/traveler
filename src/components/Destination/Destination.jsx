@@ -20,7 +20,7 @@ const Destination = ({ deal }) => {
         <figcaption className="destination__deals">
           <span>{totalDeals} deals</span>
         </figcaption>
-        <span class="destination__img-overlay"></span>
+        <span className="destination__img-overlay"></span>
       </figure>
     </AniLink>
   )
