@@ -34,7 +34,7 @@ const TopDestinations = () => {
       <div className="container">
         <section className="destinations">
           {deals.map(({ node }) => (
-            <Destination key={node.id} deal={node} />
+            <Destination key={node.title} deal={node} />
           ))}
         </section>
       </div>
