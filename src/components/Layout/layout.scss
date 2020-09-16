@@ -4,6 +4,7 @@
 :root {
   --primaryColor: #1abc9c;
   --primaryColor2: #0ba889;
+  --orangeRedColor: #ec5a4a;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
   --mainBlack: #222;
@@ -92,7 +93,7 @@ p {
   display: grid;
   grid-template-columns:
     [full-start] minmax(6rem, 1fr) [center-start] repeat(8,
-      [col-start] minmax(min-content, 15.8rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+      [col-start] minmax(min-content, 17.6rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
 
 .defaultHero {
