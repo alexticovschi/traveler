@@ -8,10 +8,8 @@ import "./slider.scss"
 
 const settings = {
   dots: true,
-  // autoplay: true,
   autoplaySpeed: 3000,
-  // infinite: true,
-  speed: 1500,
+  speed: 1000,
   slidesToShow: 3,
   slidesToScroll: 3,
   initialSlide: 0,
@@ -21,7 +19,7 @@ const settings = {
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2,
-        // infinite: true,
+        infinite: true,
         dots: true,
       },
     },
@@ -40,6 +38,7 @@ const settings = {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
+        speed: 600,
       },
     },
   ],
