@@ -1,0 +1,48 @@
+.sldr {
+  display: grid;
+}
+
+.slick-arrow {
+  margin-left: 15px;
+  margin-right: 23px;
+  margin-top: -7rem;
+  z-index: 20;
+  opacity: 1 !important;
+}
+
+.slick-arrow.slick-prev::before,
+.slick-arrow.slick-next::before {
+  color: var(--primaryColor) !important;
+  font-size: 4rem;
+  display: block !important;
+}
+
+.slick-arrow.slick-prev::before {
+  padding-right: 4rem !important;
+}
+
+.slick-slide {
+  z-index: 100;
+  border-radius: .4rem;
+}
+
+.slick-slide img {
+  margin: 0 2rem;
+  z-index: 100;
+  border-radius: .4rem;
+}
+
+.slick-list {
+  // margin: 0 15px;
+  height: auto;
+}
+
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  line-height: 20px;
+}

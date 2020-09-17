@@ -1,0 +1,48 @@
+.top-offers-wrapper {
+  margin: 10rem 0;
+
+  @media screen and (max-width: 500px) {
+    margin: 6rem 0;
+  }
+}
+
+.top-offers {
+  display: grid;
+  grid-column: center-start / center-end;
+  margin: 4rem 0;
+  height: auto;
+
+  @media only screen and (max-width: 500px) {
+    grid-column: full-start / full-end;
+    margin: 0 2rem;
+  }
+
+  &__img-wrapper {
+    position: relative;
+  }
+
+  &__badge-wrapper {
+    position: absolute;
+    width: 52px;
+    height: 54px;
+    top: 0;
+    right: 5px;
+    color: #fff;
+    z-index: 100;
+    background: linear-gradient(45deg, rgba(231, 76, 60, 0), rgba(231, 76, 60, 0) 50%, var(--orangeRedColor) 51%, var(--orangeRedColor));
+    border-top-right-radius: .4rem;
+  }
+
+  &__badge {
+    position: absolute;
+    top: 7px;
+    left: 9px;
+    width: 50px;
+    text-align: center;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+  }
+}

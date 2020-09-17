@@ -2,6 +2,8 @@ import React from "react"
 import Layout from "../components/Layout/Layout"
 import StyledHero from "../components/StyledHero"
 import Banner from "../components/Banner/Banner"
+import TopOffers from "../components/TopOffers/TopOffers"
+
 import TopDestinations from "../components/TopDestinations/TopDestinations"
 import DealsAndSavings from "../components/DealsAndSavings/DealsAndSavings"
 
@@ -31,10 +33,11 @@ const deals = ({ data }) => {
         <Banner
           className="banner"
           title="Travel is always a good idea"
-        ></Banner>
-      </StyledHero>
+        ></Banner>{" "}
+      </StyledHero>{" "}
       <TopDestinations />
       <DealsAndSavings />
+      <TopOffers />
     </Layout>
   )
 }
