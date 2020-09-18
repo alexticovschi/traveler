@@ -46,12 +46,16 @@ const settings = {
 
 const getTopOffers = graphql`
   {
-    topOffers: allContentfulTopOffers {
+    topOffers: allContentfulTopOffer {
       edges {
         node {
           title
           reviews
           days
+          price
+          highlights {
+            text
+          }
           image {
             fluid {
               ...GatsbyContentfulFluid
@@ -63,26 +67,16 @@ const getTopOffers = graphql`
   }
 `
 
-const MySlider = ({ images }) => {
-  // const { img1, img2, img3, img4 } = images
-
+const MySlider = () => {
   const response = useStaticQuery(getTopOffers)
   const topOffers = response.topOffers.edges
-  console.log(topOffers)
+
   return (
     <Slider {...settings} className="sldr">
       {topOffers.map(({ node }) => (
         <Offer key={node.title} offer={node} />
       ))}
     </Slider>
-    // <Slider {...settings} className="my-slider">
-    //   <Image fluid={img1.childImageSharp.fluid} className="my-slider__img" />
-    //   <Image fluid={img2.childImageSharp.fluid} className="my-slider__img" />
-    //   <Image fluid={img3.childImageSharp.fluid} className="my-slider__img" />
-    //   <Image fluid={img4.childImageSharp.fluid} className="my-slider__img" />
-    //   <Image fluid={img2.childImageSharp.fluid} className="my-slider__img" />
-    //   <Image fluid={img2.childImageSharp.fluid} className="my-slider__img" />
-    // </Slider>
   )
 }
 

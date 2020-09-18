@@ -5,7 +5,6 @@ import "./offer.scss"
 
 const Offer = ({ offer }) => {
   const { title, image, reviews, days, price, highlights } = offer
-
   return (
     <div className="offer">
       <figure className="offer__img-wrapper">
@@ -18,10 +17,16 @@ const Offer = ({ offer }) => {
         <h3 className="offer__title">{title}</h3>
         <p className="offer__reviews">{reviews} reviews</p>
         <h4 className="offer__days-and-price">
-          {days} days from <span> &pound;{price}</span>
+          <span className="offer__days">{days} days from</span>{" "}
+          <span className="offer__price"> &pound;{price}</span>
         </h4>
         <ul className="offer__highlights">
-          {highlights && highlights.map(h => <li>{h.text}</li>)}
+          {highlights &&
+            highlights.map(h => (
+              <li className="offer__highlights-hl">
+                <p>{h.text}</p>
+              </li>
+            ))}
         </ul>
       </div>
     </div>

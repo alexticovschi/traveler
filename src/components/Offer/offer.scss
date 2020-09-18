@@ -69,4 +69,25 @@
   &__days-and-price {
     font-size: 1.7rem;
   }
+
+  &__days {
+    font-size: 1.6rem;
+    color: var(--darkGrey);
+  }
+
+  &__price {
+    font-size: 1.6rem;
+    color: var(--primaryColor);
+  }
+
+  &__highlights {
+    &-hl {
+      list-style-type: none;
+      font-size: 1.4rem;
+    }
+
+    p {
+      margin-bottom: .5rem;
+    }
+  }
 }
