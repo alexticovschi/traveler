@@ -1,4 +1,4 @@
-.destinations-wrapper {
+.popular-travel-styles-wrapper {
   margin: 10rem 0;
 
   @media screen and (max-width: 500px) {
@@ -6,11 +6,10 @@
   }
 }
 
-.destinations {
+.popular-travel-styles {
   grid-column: center-start / center-end;
-  padding: 4rem 0;
   height: 100%;
-
+  padding: 4rem 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2.5rem;

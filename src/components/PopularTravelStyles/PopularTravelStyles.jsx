@@ -2,11 +2,11 @@ import React from "react"
 import Title from "../Title/Title"
 import OfferCard from "../OfferCard/OfferCard"
 import { useStaticQuery, graphql } from "gatsby"
-import "./topDestinations.scss"
+import "./popularTravelStyles.scss"
 
-const getDeals = graphql`
+const getPopularTravelStyles = graphql`
   {
-    deals: allContentfulDeal {
+    popularTravelStyles: allContentfulPopularTravelStyle {
       edges {
         node {
           title
@@ -23,17 +23,17 @@ const getDeals = graphql`
   }
 `
 
-const TopDestinations = () => {
-  const response = useStaticQuery(getDeals)
-  const deals = response.deals.edges
+const PopularTravelStyles = () => {
+  const response = useStaticQuery(getPopularTravelStyles)
+  const popularTravelStyles = response.popularTravelStyles.edges
 
   return (
-    <div className="destinations-wrapper">
-      <Title title="Top Destinations" />
+    <div className="popular-travel-styles-wrapper">
+      <Title title="Popular Travel Styles" />
 
       <div className="container">
-        <section className="destinations">
-          {deals.map(({ node }) => (
+        <section className="popular-travel-styles">
+          {popularTravelStyles.map(({ node }) => (
             <OfferCard key={node.title} deal={node} />
           ))}
         </section>
@@ -42,4 +42,4 @@ const TopDestinations = () => {
   )
 }
 
-export default TopDestinations
+export default PopularTravelStyles

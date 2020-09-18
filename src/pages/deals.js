@@ -2,10 +2,11 @@ import React from "react"
 import Layout from "../components/Layout/Layout"
 import StyledHero from "../components/StyledHero"
 import Banner from "../components/Banner/Banner"
-import BestDealsBanner from "../components/BestDealsBanner/BestDealsBanner"
-import TopOffers from "../components/TopOffers/TopOffers"
 import TopDestinations from "../components/TopDestinations/TopDestinations"
 import DealsAndSavings from "../components/DealsAndSavings/DealsAndSavings"
+import TopOffers from "../components/TopOffers/TopOffers"
+import BestDealsBanner from "../components/BestDealsBanner/BestDealsBanner"
+import PopularTravelStyles from "../components/PopularTravelStyles/PopularTravelStyles"
 
 import { graphql } from "gatsby"
 import SEO from "../components/SEO"
@@ -39,6 +40,7 @@ const deals = ({ data }) => {
       <DealsAndSavings />
       <TopOffers />
       <BestDealsBanner />
+      <PopularTravelStyles />
     </Layout>
   )
 }

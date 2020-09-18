@@ -1,29 +1,29 @@
 import React from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Image from "gatsby-image"
-import "./destination.scss"
+import "./offerCard.scss"
 
-const Destination = ({ deal }) => {
+const OfferCard = ({ deal }) => {
   const { title, discount, totalDeals, image } = deal
 
   return (
     <AniLink fade to={`/deals`}>
-      <figure className="destination">
-        <Image fluid={image.fluid} className="destination__img" alt="tour" />
+      <figure className="offer-card">
+        <Image fluid={image.fluid} className="offer-card__img" alt="tour" />
 
-        <figcaption className="destination__discount">
+        <figcaption className="offer-card__discount">
           <span>UP TO {discount}% OFF</span>
         </figcaption>
-        <figcaption className="destination__title">
+        <figcaption className="offer-card__title">
           <span>{title}</span>
         </figcaption>
-        <figcaption className="destination__deals">
+        <figcaption className="offer-card__deals">
           <span>{totalDeals} deals</span>
         </figcaption>
-        <span className="destination__img-overlay"></span>
+        <span className="offer-card__img-overlay"></span>
       </figure>
     </AniLink>
   )
 }
 
-export default Destination
+export default OfferCard
