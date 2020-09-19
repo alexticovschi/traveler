@@ -55,9 +55,7 @@ const Spotlight = () => {
                 Experiences you can adapt and change to create a personalized
                 trip.
               </p>
-              <a href="#" className="spotlight__special-link">
-                Learn more
-              </a>
+              <span className="spotlight__special-cta">Learn more</span>
             </div>
           </a>
           <a href="#" className="spotlight__special sp2">
@@ -77,9 +75,7 @@ const Spotlight = () => {
                 system.
               </p>
 
-              <a href="#" className="spotlight__special-link">
-                Learn more
-              </a>
+              <span className="spotlight__special-cta">Learn more</span>
             </div>
           </a>
           <div className="spotlight__info-special">
