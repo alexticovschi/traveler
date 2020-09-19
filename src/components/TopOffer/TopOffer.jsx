@@ -3,7 +3,7 @@ import Image from "gatsby-image"
 
 import "./offer.scss"
 
-const Offer = ({ offer }) => {
+const TopOffer = ({ offer }) => {
   const { title, image, reviews, days, price, highlights } = offer
   return (
     <div className="offer">
@@ -33,4 +33,4 @@ const Offer = ({ offer }) => {
   )
 }
 
-export default Offer
+export default TopOffer

@@ -4,6 +4,7 @@
 :root {
   --primaryColor: #1abc9c;
   --primaryColor2: #0ba889;
+  --primaryColorLight: #ccfff5;
   --orangeRedColor: #ec5a4a;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
@@ -81,6 +82,10 @@ h6 {
   margin-bottom: 1.25rem;
   font-size: 2.8rem;
   letter-spacing: var(--mainSpacing);
+}
+
+a {
+  letter-spacing: 1px;
 }
 
 p {

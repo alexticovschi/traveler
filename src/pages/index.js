@@ -7,6 +7,7 @@ import WhyUs from "../components/WhyUs/WhyUs"
 import HomeBanner from "../components/HomeBanner/HomeBanner"
 import PopularTours from "../components/PopularTours/PopularTours"
 import Services from "../components/Services/Services"
+import Spotlight from "../components/Spotlight/Spotlight"
 import LatestPosts from "../components/LatestPosts/LatestPosts"
 import { graphql } from "gatsby"
 import SEO from "../components/SEO"
@@ -25,14 +26,15 @@ export default ({ data }) => (
         info="The world is a book and those who do not travel read only one page."
       >
         <AniLink fade to="/tours" className="btn-white">
-          Explore Tours
-        </AniLink>
-      </Banner>
-    </StyledHero>
+          Explore Tours{" "}
+        </AniLink>{" "}
+      </Banner>{" "}
+    </StyledHero>{" "}
     <HomeBanner />
     <WhyUs />
     <PopularTours />
     <Services />
+    <Spotlight />
     <LatestPosts />
   </Layout>
 )

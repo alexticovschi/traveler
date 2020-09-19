@@ -52,6 +52,11 @@
     letter-spacing: 1px;
   }
 
+  &__star-rating {
+    display: flex;
+    align-items: center;
+  }
+
   &__data {
     margin-left: 1.5rem;
     margin-top: 1rem;
@@ -89,5 +94,20 @@
     p {
       margin-bottom: .5rem;
     }
+  }
+}
+
+.react-rater-star.is-active,
+.react-rater-star.is-active-half:before {
+  color: #fc6;
+}
+
+.react-rater-star {
+  font-size: 1.8rem;
+  color: #747171;
+  margin-top: -.3rem;
+
+  @media (max-width: 500px) {
+    font-size: 15px;
   }
 }

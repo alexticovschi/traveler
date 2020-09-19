@@ -1,6 +1,6 @@
 import React from "react"
 import Slider from "react-slick"
-import Offer from "../Offer/Offer"
+import TopOffer from "../TopOffer/TopOffer"
 import { useStaticQuery, graphql } from "gatsby"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
@@ -74,7 +74,7 @@ const MySlider = () => {
   return (
     <Slider {...settings} className="sldr">
       {topOffers.map(({ node }) => (
-        <Offer key={node.title} offer={node} />
+        <TopOffer key={node.title} offer={node} />
       ))}
     </Slider>
   )
