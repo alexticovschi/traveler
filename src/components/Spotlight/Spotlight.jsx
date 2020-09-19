@@ -45,7 +45,7 @@ const Spotlight = () => {
               <Image
                 fluid={img1.childImageSharp.fluid}
                 className="spotlight__special-image"
-                alt="whyus card"
+                alt="spotlight sp1"
               />
             </figure>
 
@@ -63,7 +63,7 @@ const Spotlight = () => {
               <Image
                 fluid={img2.childImageSharp.fluid}
                 className="spotlight__special-image"
-                alt="whyus card"
+                alt="spotlight sp2"
               />
             </figure>
             <div className="spotlight__special-content">
