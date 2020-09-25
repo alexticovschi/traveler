@@ -7,15 +7,15 @@
 .bar1,
 .bar2,
 .bar3 {
-  width: 27px;
-  height: 3px;
+  width: 21px;
+  height: 2.5px;
   background-color: #333;
-  margin: 5px 0;
+  margin: 4px 0;
   transition: 0.3s;
 }
 
 .change .bar1 {
-  transform: rotate(-45deg) translate(-6px, 6.5px);
+  transform: rotate(-45deg) translate(-4px, 3.5px);
 }
 
 .change .bar2 {
