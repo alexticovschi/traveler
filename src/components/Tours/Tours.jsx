@@ -19,7 +19,7 @@ const getTours = graphql`
           departure
           images {
             fluid {
-              ...GatsbyContentfulFluid_tracedSVG
+              ...GatsbyContentfulFluid
             }
           }
         }
