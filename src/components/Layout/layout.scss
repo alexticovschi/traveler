@@ -159,6 +159,15 @@ main {
   flex-direction: column;
 }
 
+.wrapper {
+  margin: 10rem 0;
+
+  @media screen and (max-width: 500px) {
+    margin: 6rem 0;
+  }
+}
+
+
 .error {
   background: var(--primaryColor);
   min-height: calc(100vh - 62px);

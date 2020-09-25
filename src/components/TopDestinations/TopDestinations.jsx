@@ -12,6 +12,7 @@ const getDeals = graphql`
           title
           discount
           totalDeals
+          slug
           image {
             fluid {
               ...GatsbyContentfulFluid

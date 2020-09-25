@@ -1,6 +1,6 @@
 import React from "react"
 import Title from "../Title/Title"
-import OfferCard from "../OfferCard/OfferCard"
+import TravelStyleCard from "../TravelStyleCard/TravelStyleCard"
 import { useStaticQuery, graphql } from "gatsby"
 import "./popularTravelStyles.scss"
 
@@ -34,7 +34,7 @@ const PopularTravelStyles = () => {
       <div className="container">
         <section className="popular-travel-styles">
           {popularTravelStyles.map(({ node }) => (
-            <OfferCard key={node.title} deal={node} />
+            <TravelStyleCard key={node.title} deal={node} />
           ))}
         </section>
       </div>

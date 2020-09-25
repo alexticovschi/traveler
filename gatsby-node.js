@@ -8,10 +8,18 @@ exports.createPages = async ({ graphql, actions }) => {
         edges {
           node {
             slug
+            continent
           }
         }
       }
       posts: allContentfulPost {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
+      deals: allContentfulDeal {
         edges {
           node {
             slug
@@ -33,6 +41,15 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: `blog/${node.slug}`,
       component: path.resolve("./src/templates/blog-template.js"),
+      context: {
+        slug: node.slug,
+      },
+    })
+  })
+  data.deals.edges.forEach(({ node }) => {
+    createPage({
+      path: `deals/${node.slug}`,
+      component: path.resolve("./src/templates/deals-template.js"),
       context: {
         slug: node.slug,
       },

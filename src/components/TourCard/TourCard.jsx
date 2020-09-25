@@ -4,7 +4,11 @@ import Image from "gatsby-image"
 
 import "./tourCard.scss"
 
-const TourCard = ({ name, price, slug, days, image, departure }) => {
+const TourCard = ({ name, price, slug, days, image, departure, discount }) => {
+  let reduced = (price * parseFloat(discount)) / 100.0
+  let newPrice = price - reduced
+  console.log(discount)
+
   return (
     <div className="tour-card">
       <AniLink fade to={`/tours/${slug}`}>
@@ -19,7 +23,23 @@ const TourCard = ({ name, price, slug, days, image, departure }) => {
       <h3 className="tour-card__name">{name}</h3>
       <p className="tour-card__departure">Departs {departure}</p>
       <div className="tour-card__price-offer">
-        From <span> &pound;{price}</span>
+        <div className="tour-card__prices">
+          From{" "}
+          {!discount ? (
+            <span>&pound;{price}</span>
+          ) : (
+            <span>
+              <span className="tour-card__old-price">&pound;{price}</span>{" "}
+              &pound;
+              {parseInt(newPrice)}
+            </span>
+          )}
+        </div>
+        {discount ? (
+          <div className="tour-card__savings">
+            You Save: &pound;{parseInt(reduced)}
+          </div>
+        ) : null}
       </div>
       <AniLink fade to={`/tours/${slug}`}>
         <div className="tour-card__btn-wrapper">
