@@ -3,7 +3,7 @@
   grid-template-rows: repeat(2, 50%);
   grid-template-columns: 50% 25% 25%;
 
-  height: 68vh;
+  height: 50vh;
 
   @media screen and (max-width: 1440px) {
     grid-template-columns: 70% 30%;

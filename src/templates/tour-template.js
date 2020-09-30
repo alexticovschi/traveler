@@ -3,6 +3,8 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout/Layout"
 import TourBanner from "../components/TourBanner/TourBanner"
 import TourDetails from "../components/TourDetails/TourDetails"
+import WhyUs from "../components/WhyUs/WhyUs"
+import IncludedServices from "../components/IncludedServices/IncludedServices"
 import PopularTours from "../components/PopularTours/PopularTours"
 import SEO from "../components/SEO"
 
@@ -30,6 +32,8 @@ const TourTemplate = ({ data }) => {
         departure={departure}
         itinerary={itinerary}
       />
+      <IncludedServices />
+      <WhyUs />
       <PopularTours />
     </Layout>
   )
