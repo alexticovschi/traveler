@@ -40,10 +40,10 @@
   }
 
   @media screen and (min-width: 768px) {
-    width: 73%;
+    width: 95%;
 
     &__title {
-      font-size: 7rem;
+      font-size: 6rem;
     }
 
     &__info {
@@ -54,6 +54,12 @@
     &__discount {
       max-width: 50rem;
       font-size: 3rem;
+    }
+  }
+
+  @media screen and (min-width: 1026px) {
+    &__title {
+      font-size: 8rem;
     }
   }
 }
