@@ -2,7 +2,8 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 5.5rem 2rem 2rem;
+  grid-template-rows: 1fr 5.5rem 2.5rem 2.5rem;
+  align-items: center;
   user-select: none;
   border-radius: .5rem;
   text-decoration: none;
@@ -23,7 +24,8 @@
   &__departure {
     font-family: "Nunito";
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: var(--mainSpacing);
+    margin: 0;
   }
 
   &__duration {
@@ -125,9 +127,9 @@
   }
 
   &__departure {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     color: var(--lightGrey);
-    text-transform: uppercase;
+    padding: .2rem 0;
 
     @media (max-width: 800px) {
       font-size: 1.5rem;

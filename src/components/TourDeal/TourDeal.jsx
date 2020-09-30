@@ -19,6 +19,9 @@ const TourDeal = ({ tour }) => {
             <span className="tour-deal__duration-days">{days}</span>
             <span className="tour-deal__duration-text">days</span>
           </figcaption>
+          <div className="tour-deal__badge-wrapper">
+            <span className="tour-deal__badge">-{discount}%</span>
+          </div>
         </figure>
       </AniLink>
       <h3 className="tour-deal__name">{name}</h3>

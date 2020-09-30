@@ -6,10 +6,8 @@
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 8rem 3rem;
   user-select: none;
-  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: var(--mainBoxShadow);
   border: 1px solid var(--mainGrey);
-  border-bottom-right-radius: .5rem;
-  border-bottom-left-radius: .5rem;
 
   @media screen and (max-width: 900px) {
     grid-template-rows: 1fr 8rem 3rem;
@@ -17,6 +15,8 @@
 
   &__img-wrapper {
     overflow: hidden;
+    border-top-right-radius: var(--mainBorderRadius);
+    border-top-left-radius: var(--mainBorderRadius);
   }
 
   &__duration {
@@ -139,6 +139,31 @@
     text-transform: capitalize;
     font-size: 1.4rem;
     color: var(--lightGrey);
+  }
+
+  &__badge-wrapper {
+    position: absolute;
+    width: 52px;
+    height: 54px;
+    top: 0;
+    right: 0;
+    color: var(--mainWhite);
+    z-index: 100;
+    background: linear-gradient(45deg, rgba(231, 76, 60, 0), rgba(231, 76, 60, 0) 50%, var(--orangeRedColor) 51%, var(--orangeRedColor));
+    border-top-right-radius: var(--mainBorderRadius);
+  }
+
+  &__badge {
+    position: absolute;
+    top: 7px;
+    left: 9px;
+    width: 50px;
+    text-align: center;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
   }
 
   &__btn-wrapper {

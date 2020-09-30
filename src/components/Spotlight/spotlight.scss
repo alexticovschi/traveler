@@ -32,13 +32,9 @@
     transition: .1s ease-in;
     position: relative;
     z-index: 1;
-    border-radius: 1rem;
-    box-shadow: 0 1px 2px rgba(3, 54, 63, .4),
-      0 -1px 2px rgba(3, 54, 63, .04);
-
-    &:hover {
-      box-shadow: 1px 2px 7px rgba(3, 54, 63, .3);
-    }
+    border-top-right-radius: var(--mainBorderRadius);
+    box-shadow: var(--mainBoxShadow);
+    border: 1px solid var(--mainGrey);
 
     .sp1 {
       @media screen and (max-width: 1250px) {
@@ -133,18 +129,13 @@
     &__item {
       display: grid;
       grid-template-columns: .1fr 2fr;
-
-      border-radius: 1rem;
-      box-shadow: 0 1px 2px rgba(3, 54, 63, .4),
-        0 -1px 2px rgba(3, 54, 63, .04);
+      border-radius: var(--mainBorderRadius);
+      border: 1px solid var(--mainGrey);
+      box-shadow: var(--mainBoxShadow);
       overflow: hidden;
       width: 100%;
       min-height: 9rem;
       transition: .1s ease-in;
-
-      &:hover {
-        box-shadow: 1px 2px 7px rgba(3, 54, 63, .3);
-      }
     }
 
     &__icon {
