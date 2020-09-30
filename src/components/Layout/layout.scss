@@ -15,6 +15,8 @@
   --mainTransition: all 0.3s linear;
   --mainSpacing: 1.6px;
   --mainBorderRadius: .6rem;
+  --mainFont: "Nunito",
+    sans-serif;
 }
 
 html {
@@ -54,6 +56,7 @@ body {
   padding: 0;
   box-sizing: inherit;
   text-decoration: none;
+  list-style: none;
 }
 
 *:focus {
@@ -78,7 +81,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Nunito", sans-serif;
+  font-family: var(--mainFont);
   font-weight: bold;
   margin-bottom: 1.25rem;
   font-size: 2.8rem;
@@ -91,7 +94,7 @@ a {
 
 p {
   margin-bottom: 1.25rem;
-  font-family: "Nunito", sans-serif;
+  font-family: var(--mainFont);
   color: var(--darkGrey);
 }
 
@@ -122,7 +125,7 @@ p {
   border-radius: 4px;
   padding: 1.5rem 2.5rem;
   font-size: 1.3rem;
-  font-family: "Nunito", sans-serif;
+  font-family: var(--mainFont);
   font-weight: bold;
 
   display: inline-block;
@@ -145,7 +148,7 @@ p {
   color: var(--mainWhite);
   border: 2px solid var(--primaryColor);
   border-radius: 4px;
-  font-family: "Nunito";
+  font-family: var(--mainFont);
   font-weight: bolder;
 }
 

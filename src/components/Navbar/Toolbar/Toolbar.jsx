@@ -23,62 +23,72 @@ const Toolbar = ({ isOpen, drawerClickHandler }) => (
           </AniLink>
         </div>
         <div className="spacer" />
-        <div className="toolbar_navigation-items">
-          <ul>
-            <li>
-              <AniLink fade to="/">
-                Home
-              </AniLink>
+        <ul className="toolbar__navigation-items">
+          <li className="toolbar__navigation-item">
+            <AniLink fade to="/">
+              Home
+            </AniLink>
+          </li>
+          <li className="toolbar__navigation-item">
+            <AniLink fade to="/tours">
+              Tours
+            </AniLink>
+          </li>
+          <li className="toolbar__navigation-item">
+            <AniLink fade to="/deals">
+              Deals
+            </AniLink>
+          </li>
+          <li className="toolbar__navigation-item">
+            <AniLink fade to="/blog">
+              Blog
+            </AniLink>
+          </li>
+          <li className="toolbar__navigation-item">
+            <AniLink fade to="/about">
+              About
+            </AniLink>
+          </li>
+          <li className="toolbar__navigation-item">
+            <AniLink fade to="/contact">
+              Contact
+            </AniLink>
+          </li>
+          <ul className="toolbar__navigation-social-links">
+            <li className="toolbar__navigation-social-item">
+              <a
+                className="toolbar__navigation-social-link"
+                href="https://www.tripadvisor.co.uk/"
+              >
+                <FaTripadvisor />
+              </a>
             </li>
-            <li>
-              <AniLink fade to="/tours">
-                Tours
-              </AniLink>
+            <li className="toolbar__navigation-social-item">
+              <a
+                className="toolbar__navigation-social-link"
+                href="https://www.instagram.com/"
+              >
+                <FaInstagram />
+              </a>
             </li>
-            <li>
-              <AniLink fade to="/deals">
-                Deals
-              </AniLink>
+            <li className="toolbar__navigation-social-item">
+              <a
+                className="toolbar__navigation-social-link"
+                href="https://twitter.com/"
+              >
+                <FaTwitter />
+              </a>
             </li>
-            <li>
-              <AniLink fade to="/blog">
-                Blog
-              </AniLink>
+            <li className="toolbar__navigation-social-item">
+              <a
+                className="toolbar__navigation-social-link"
+                href="https://en-gb.facebook.com/"
+              >
+                <FaFacebookF />
+              </a>
             </li>
-            <li>
-              <AniLink fade to="/about">
-                About
-              </AniLink>
-            </li>
-            <li>
-              <AniLink fade to="/contact">
-                Contact
-              </AniLink>
-            </li>
-            <div className="social-links">
-              <li>
-                <a href="https://www.tripadvisor.co.uk/">
-                  <FaTripadvisor />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/">
-                  <FaInstagram />
-                </a>
-              </li>
-              <li>
-                <a href="https://twitter.com/">
-                  <FaTwitter />
-                </a>
-              </li>
-              <li>
-                <a href="https://en-gb.facebook.com/">
-                  <FaFacebookF />
-                </a>
-              </li>
-            </div>
           </ul>
-        </div>
+        </ul>
         <div className="toolbar__toggle-button">
           <DrawerToggleButton isOpen={isOpen} click={drawerClickHandler} />
         </div>

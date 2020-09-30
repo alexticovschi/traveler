@@ -1,12 +1,17 @@
+@font-face {
+  font-family: "Nexa-Rust-2";
+  src: url("../../fonts/NexaRustSans-Black.otf");
+}
+
 .banner {
   text-align: center;
   letter-spacing: var(--mainSpacing);
   color: var(--mainWhite);
 
   &__title {
-    font-family: 'Noto Serif', serif;
+    font-family: Nexa-Rust-2;
     font-size: 3.3rem;
-    font-weight: 700;
+    font-weight: 1200;
     text-transform: uppercase;
     margin-bottom: 2rem;
     padding: 0 1rem;
@@ -20,8 +25,6 @@
     margin: 0 auto;
     margin-bottom: 2rem;
     color: var(--mainWhite);
-
-    font-family: "Nunito";
     font-weight: 700;
     text-transform: capitalize;
   }

@@ -15,13 +15,13 @@
     height: 100%;
   }
 
-  .toolbar__navigation {
+  &__navigation {
     display: flex;
     height: 100%;
     align-items: center;
   }
 
-  .toolbar__logo {
+  &__logo {
     a {
       text-decoration: none;
       font-size: 1.9rem;
@@ -45,38 +45,60 @@
     flex: 1;
   }
 
-  .toolbar_navigation-items ul {
-    list-style: none;
+  &__navigation-items {
     margin: 0;
     padding: 0;
     display: flex;
+  }
 
-    .social-links {
-      display: flex;
-      margin-left: 40px;
+  &__navigation-social-links {
+    display: flex;
+    margin-left: 5rem;
+  }
 
-      a {
-        color: var(--primaryColor);
+  &__navigation-social-item {
+    margin-left: 3rem;
+    transition: 0.3s;
 
-        &:hover {
-          transform: translateY(-2px);
-        }
-      }
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+
+  &__navigation-social-link {
+    font-size: 1.7rem;
+    color: var(--primaryColor);
+
+    &::before {
+      content: "";
+      display: block;
+      height: 3px;
+      background: var(--primaryColor);
+      position: absolute;
+      top: -6px;
+      left: 0;
+      right: 0;
+      transform: scale(0, 1);
+      transition: transform ease-in-out 250ms;
     }
 
-    li {
-      padding-left: 3rem;
-      font-size: 2rem;
-      display: flex;
-      align-self: center;
+    &:hover::before {
+      transform: scale(1, 1);
     }
+  }
+
+  &__navigation-item {
+    padding-left: 3rem;
+    display: flex;
+    align-self: center;
 
     a {
       color: var(--darkGrey);
       position: relative;
       text-transform: uppercase;
-      font-size: 18px;
-      font-weight: 500;
+      font-family: var(--mainFont);
+      font-size: 1.25rem;
+      font-weight: 600;
       text-decoration: none;
       transition: 0.3s;
 
@@ -105,17 +127,18 @@
   }
 }
 
+
 @media (max-width: 1200px) {
   .toolbar-wrapper {
     padding: 0 15px;
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 980px) {
   .toolbar {
     height: 66px;
 
-    .toolbar_navigation-items {
+    &__navigation-items {
       display: none;
     }
 
@@ -123,7 +146,7 @@
       padding: 0 15px;
     }
 
-    .toolbar__logo {
+    &__logo {
       a {
         width: 100px;
         font-size: 1.5rem !important;
@@ -139,7 +162,7 @@
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 980px) {
   .toolbar__toggle-button {
     display: none;
   }
