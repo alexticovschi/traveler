@@ -5,7 +5,7 @@
 
   &__title {
     font-family: 'Noto Serif', serif;
-    font-size: 4rem;
+    font-size: 3.3rem;
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 2rem;
@@ -28,29 +28,32 @@
 
   &__discount {
     background: var(--orangeRedColor);
-    color: #fff;
-    width: 40%;
+    color: var(--mainWhite);
+    width: 50%;
     margin: auto;
     padding: 14px;
     border-radius: 25px;
     font-weight: 500;
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 2rem;
     letter-spacing: 1.3px;
   }
-}
 
-@media screen and (min-width: 768px) {
-  .banner {
+  @media screen and (min-width: 768px) {
     width: 73%;
 
     &__title {
-      font-size: 8rem;
+      font-size: 7rem;
     }
 
     &__info {
       width: 70%;
       font-size: 2.8rem;
+    }
+
+    &__discount {
+      max-width: 50rem;
+      font-size: 3rem;
     }
   }
 }
