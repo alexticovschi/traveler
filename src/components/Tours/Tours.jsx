@@ -17,6 +17,8 @@ const getTours = graphql`
           contentful_id
           days
           departure
+          offer
+          discount
           images {
             fluid {
               ...GatsbyContentfulFluid

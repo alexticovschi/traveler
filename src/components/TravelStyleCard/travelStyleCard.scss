@@ -3,14 +3,14 @@
   display: grid;
   grid-template-columns: 1fr;
   padding: 0;
-  border-radius: .5rem;
+  border-radius: var(--mainBorderRadius);
   position: relative;
 
   &__img {
     height: 25rem;
     width: 100%;
     object-fit: cover;
-    border-radius: .4rem;
+    border-radius: var(--mainBorderRadius);
   }
 
   &__title {
@@ -56,7 +56,7 @@
     left: 0;
     z-index: 1;
     background: linear-gradient(180deg, transparent, rgba(0, 0, 0, .7) 100%);
-    border-radius: .4rem;
+    border-radius: var(--mainBorderRadius);
   }
 
   &__discount {

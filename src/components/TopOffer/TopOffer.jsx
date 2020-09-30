@@ -1,12 +1,12 @@
 import React from "react"
 import Image from "gatsby-image"
 
-import "./offer.scss"
+import "./topOffer.scss"
 
 const TopOffer = ({ offer }) => {
   const { title, image, reviews, days, price, highlights } = offer
   return (
-    <div className="offer">
+    <div className="offer" key={offer.id}>
       <figure className="offer__img-wrapper">
         <Image fluid={image.fluid} className="offer__img" />
         <div className="offer__badge-wrapper">
@@ -22,8 +22,8 @@ const TopOffer = ({ offer }) => {
         </h4>
         <ul className="offer__highlights">
           {highlights &&
-            highlights.map(h => (
-              <li className="offer__highlights-hl">
+            highlights.map((h, i) => (
+              <li className="offer__highlights-hl" key={i}>
                 <p>{h.text}</p>
               </li>
             ))}

@@ -4,7 +4,7 @@ import Layout from "../components/Layout/Layout"
 import Title from "../components/Title/Title"
 import StyledHero from "../components/StyledHero"
 import Banner from "../components/Banner/Banner"
-import Tour from "../components/Tour/Tour"
+import TourDeal from "../components/TourDeal/TourDeal"
 import PopularTours from "../components/PopularTours/PopularTours"
 import SEO from "../components/SEO"
 
@@ -18,11 +18,11 @@ const DealTemplate = ({ data }) => {
         opacity="true"
         img={data.dealsHeroImage.childImageSharp.fluid}
       >
-        <Banner
-          className="banner"
-          title={`${title} Deals`}
-          info={`Up to ${discount}% OFF`}
-        ></Banner>
+        <Banner className="banner" title={`${title} Deals`}>
+          <div className="banner__discount">
+            <span>UP TO {discount}% OFF</span>
+          </div>
+        </Banner>
       </StyledHero>
       <div className="wrapper">
         <Title title="Explore our Deals" />
@@ -30,7 +30,7 @@ const DealTemplate = ({ data }) => {
         <div className="container">
           <section className="tours">
             {data.deals.edges.map(({ node }) => (
-              <Tour key={node.id} tour={node} discount={discount} />
+              <TourDeal key={node.id} tour={node} />
             ))}
           </section>
         </div>
@@ -47,6 +47,7 @@ export const query = graphql`
     ) {
       edges {
         node {
+          id
           name
           price
           days
@@ -73,6 +74,7 @@ export const query = graphql`
             title
             description
           }
+          discount
         }
       }
     }

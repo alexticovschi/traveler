@@ -2,8 +2,8 @@ import React from "react"
 import "./tour.scss"
 import TourCard from "../TourCard/TourCard"
 
-const Tour = ({ tour, discount }) => {
-  const { name, price, days, slug, images, departure } = tour
+const Tour = ({ tour }) => {
+  const { name, price, days, slug, images, departure, offer, discount } = tour
   let mainImage = images[0].fluid
 
   return (
@@ -16,6 +16,7 @@ const Tour = ({ tour, discount }) => {
         slug={slug}
         departure={departure}
         discount={discount}
+        offer={offer}
       />
     </article>
   )

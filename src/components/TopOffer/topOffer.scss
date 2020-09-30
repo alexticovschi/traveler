@@ -15,7 +15,7 @@
     display: block;
     overflow: hidden;
     margin-left: -5px;
-    border-radius: .4rem;
+    border-radius: var(--mainBorderRadius);
 
     @media only screen and (max-width: 500px) {
       margin-left: -1rem;
@@ -29,10 +29,10 @@
     height: 54px;
     top: 0;
     right: 5px;
-    color: #fff;
+    color: var(--mainWhite);
     z-index: 100;
     background: linear-gradient(45deg, rgba(231, 76, 60, 0), rgba(231, 76, 60, 0) 50%, var(--orangeRedColor) 51%, var(--orangeRedColor));
-    border-top-right-radius: .4rem;
+    border-top-right-radius: var(--mainBorderRadius);
 
     @media only screen and (max-width: 500px) {
       right: 10px;
@@ -94,20 +94,5 @@
     p {
       margin-bottom: .5rem;
     }
-  }
-}
-
-.react-rater-star.is-active,
-.react-rater-star.is-active-half:before {
-  color: #fc6;
-}
-
-.react-rater-star {
-  font-size: 1.8rem;
-  color: #747171;
-  margin-top: -.3rem;
-
-  @media (max-width: 500px) {
-    font-size: 15px;
   }
 }

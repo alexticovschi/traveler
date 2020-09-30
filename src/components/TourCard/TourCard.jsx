@@ -4,10 +4,18 @@ import Image from "gatsby-image"
 
 import "./tourCard.scss"
 
-const TourCard = ({ name, price, slug, days, image, departure, discount }) => {
+const TourCard = ({
+  name,
+  price,
+  slug,
+  days,
+  image,
+  departure,
+  discount,
+  offer,
+}) => {
   let reduced = (price * parseFloat(discount)) / 100.0
   let newPrice = price - reduced
-  console.log(discount)
 
   return (
     <div className="tour-card">
@@ -18,6 +26,11 @@ const TourCard = ({ name, price, slug, days, image, departure, discount }) => {
             <span className="tour-card__duration-days">{days}</span>
             <span className="tour-card__duration-text">days</span>
           </figcaption>
+          {discount ? (
+            <div className="tour-card__badge-wrapper">
+              <span className="tour-card__badge">-{discount}%</span>
+            </div>
+          ) : null}
         </figure>
       </AniLink>
       <h3 className="tour-card__name">{name}</h3>
@@ -25,7 +38,7 @@ const TourCard = ({ name, price, slug, days, image, departure, discount }) => {
       <div className="tour-card__price-offer">
         <div className="tour-card__prices">
           From{" "}
-          {!discount ? (
+          {!offer ? (
             <span>&pound;{price}</span>
           ) : (
             <span>
