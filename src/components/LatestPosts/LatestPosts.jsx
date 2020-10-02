@@ -7,7 +7,7 @@ import "./latestPosts.scss"
 const getPosts = graphql`
   query {
     posts: allContentfulPost(
-      limit: 3
+      limit: 4
       sort: { fields: published, order: DESC }
     ) {
       edges {

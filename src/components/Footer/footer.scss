@@ -148,6 +148,8 @@
     background: var(--primaryColor);
     color: var(--mainWhite);
     border: 2px solid var(--primaryColor);
+    border-radius: var(--mainBorderRadius);
+
     cursor: pointer;
     z-index: 100;
 

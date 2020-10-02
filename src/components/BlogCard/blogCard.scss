@@ -4,7 +4,7 @@
   grid-template-rows: 30rem 0.5fr;
   margin-bottom: 4rem;
   border: 0.1rem solid var(--mainGrey);
-  border-radius: 0.4rem;
+  border-radius: var(--mainBorderRadius);
   padding: 1.2rem 1rem;
 
   @media screen and (max-width: 500px) {
@@ -63,7 +63,7 @@
     width: 20rem;
 
     &:hover {
-      background-color: #0ba889;
+      background-color: var(--primaryColor);
       color: var(--mainWhite);
     }
 
