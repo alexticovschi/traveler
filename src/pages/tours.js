@@ -3,7 +3,9 @@ import Layout from "../components/Layout/Layout"
 import StyledHero from "../components/StyledHero"
 import Banner from "../components/Banner/Banner"
 import Tours from "../components/Tours/Tours"
+import HowItWorksBanner from "../components/HowItWorksBanner/HowItWorksBanner"
 import PopularTours from "../components/PopularTours/PopularTours"
+import WhyUs from "../components/WhyUs/WhyUs"
 import { graphql } from "gatsby"
 import SEO from "../components/SEO"
 
@@ -24,6 +26,8 @@ const tours = ({ data }) => {
         ></Banner>
       </StyledHero>
       <Tours />
+      <WhyUs />
+      <HowItWorksBanner />
       <PopularTours />
     </Layout>
   )

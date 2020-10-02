@@ -1,0 +1,67 @@
+.how-it-works-banner {
+  position: relative;
+  grid-column: center-start / center-end;
+  margin: 10rem 0;
+  grid-template-rows: 11rem 7rem;
+  grid-row-gap: 2rem;
+
+  @media only screen and (max-width: 500px) {
+    grid-column: full-start / full-end;
+    margin: 6rem 2rem;
+  }
+
+  &__content {
+    position: absolute;
+    width: 80%;
+    top: 16%;
+    left: 3%;
+    max-width: 35rem;
+    display: grid;
+    grid-template-rows: auto 1fr 1fr;
+    grid-row-gap: 2rem;
+    z-index: 10;
+
+    &-title {
+      font-weight: 900;
+      color: var(--mainWhite);
+    }
+
+    &-text {
+      font-size: 2.2rem;
+      color: var(--mainWhite);
+    }
+  }
+
+
+  &__img {
+    border-radius: var(--mainBorderRadius);
+    width: 100%;
+    height: 29rem;
+    object-fit: cover;
+  }
+
+  &__btn-wrapper {
+    padding: 1rem;
+  }
+
+  &__btn {
+    width: 80%;
+    background-color: var(--mainWhite);
+    color: var(--primaryColor);
+
+    @media screen and (max-width: 900px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__img-overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background: linear-gradient(230deg, transparent, rgba(0, 0, 0, .4) 100%);
+    border-radius: var(--mainBorderRadius);
+  }
+}

@@ -8,6 +8,7 @@ import HomeBanner from "../components/HomeBanner/HomeBanner"
 import PopularTours from "../components/PopularTours/PopularTours"
 import Services from "../components/Services/Services"
 import Spotlight from "../components/Spotlight/Spotlight"
+import HowItWorksBanner from "../components/HowItWorksBanner/HowItWorksBanner"
 import LatestPosts from "../components/LatestPosts/LatestPosts"
 import { graphql } from "gatsby"
 import SEO from "../components/SEO"
@@ -35,6 +36,7 @@ export default ({ data }) => (
     <PopularTours />
     <Services />
     <Spotlight />
+    <HowItWorksBanner />
     <LatestPosts />
   </Layout>
 )
