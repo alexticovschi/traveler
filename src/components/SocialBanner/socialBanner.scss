@@ -1,0 +1,37 @@
+.social-banner {
+  grid-column: full-start / full-end;
+  padding: .4rem 0;
+  background-color: var(--primaryColor);
+
+  @media only screen and (max-width: 700px) {
+    padding: .3rem 2rem;
+  }
+
+  &__social-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    max-width: 40rem;
+    margin: 0 auto;
+
+    @media only screen and (max-width: 900px) {
+      max-width: 30rem;
+    }
+  }
+
+  &__social-item {
+    margin-top: .3rem;
+    margin-bottom: -.9rem;
+  }
+
+  &__social-link {
+    font-size: 3.5rem;
+    color: var(--mainWhite);
+    height: 100%;
+    width: 100%;
+
+    @media only screen and (max-width: 900px) {
+      font-size: 3rem;
+    }
+  }
+}

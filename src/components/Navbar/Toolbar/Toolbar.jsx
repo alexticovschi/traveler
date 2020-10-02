@@ -1,6 +1,5 @@
 import React from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-// import { Link } from "gatsby"
 import logo from "../../../images/svg/logo.svg"
 
 import {

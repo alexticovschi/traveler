@@ -34,8 +34,8 @@ const DealTemplate = ({ data }) => {
             ))}
           </section>
         </div>
-        <PopularTours />
       </div>
+      <PopularTours />
     </Layout>
   )
 }

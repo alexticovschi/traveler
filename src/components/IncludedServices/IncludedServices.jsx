@@ -1,5 +1,4 @@
 import React from "react"
-import Image from "gatsby-image"
 import Title from "../Title/Title"
 import bed from "../../images/svg/bed.svg"
 import bus from "../../images/svg/bus.svg"
