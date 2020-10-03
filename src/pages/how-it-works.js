@@ -2,15 +2,16 @@ import React from "react"
 import Layout from "../components/Layout/Layout"
 import StyledHero from "../components/StyledHero"
 import Banner from "../components/Banner/Banner"
-import Form from "../components/Form/Form"
+import TravelExperience from "../components/TravelExperience/TravelExperience"
+import HowItWorksInfo from "../components/HowItWorksInfo/HowItWorksInfo"
 import PopularTours from "../components/PopularTours/PopularTours"
-import HowItWorksBanner from "../components/HowItWorksBanner/HowItWorksBanner"
+
 import { graphql } from "gatsby"
 import SEO from "../components/SEO"
 
 export const query = graphql`
   query {
-    contactHeroImage: file(relativePath: { eq: "contactHero.jpg" }) {
+    howItWorksHeroImage: file(relativePath: { eq: "howItWorksHero.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4140) {
           ...GatsbyImageSharpFluid_withWebp
@@ -20,21 +21,21 @@ export const query = graphql`
   }
 `
 
-const contact = ({ data }) => {
+const HowItWorks = ({ data }) => {
   return (
     <Layout>
-      <SEO title="Contact" description="Get In Touch" />
+      <SEO title="How It Works" description="How It Works page" />
       <StyledHero
         opacity="true"
-        img={data.contactHeroImage.childImageSharp.fluid}
+        img={data.howItWorksHeroImage.childImageSharp.fluid}
       >
-        <Banner className="banner" title="Get In Touch"></Banner>
+        <Banner className="banner" title="How It Works"></Banner>
       </StyledHero>
-      <Form />
-      <HowItWorksBanner />
+      <HowItWorksInfo />
+      <TravelExperience />
       <PopularTours />
     </Layout>
   )
 }
 
-export default contact
+export default HowItWorks

@@ -12,7 +12,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 2rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
 
     @media only screen and (max-width: 950px) {
       grid-template-columns: repeat(2, 1fr);

@@ -1,5 +1,6 @@
 import React from "react"
 import Image from "gatsby-image"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { useStaticQuery, graphql } from "gatsby"
 import "./howItWorksBanner.scss"
 
@@ -22,14 +23,17 @@ const HowItWorksBanner = () => {
           <h3 className="how-it-works-banner__content-text">
             Everything you need to know about our tours
           </h3>
-          <div className="how-it-works-banner__btn-wrapper">
-            <button
-              type="button"
-              className="btn-white how-it-works-banner__btn"
-            >
-              Explore
-            </button>
-          </div>
+
+          <AniLink fade to={`/how-it-works`}>
+            <div className="how-it-works-banner__btn-wrapper">
+              <button
+                type="button"
+                className="btn-white how-it-works-banner__btn"
+              >
+                Explore
+              </button>
+            </div>
+          </AniLink>
         </div>
         <span className="how-it-works-banner__img-overlay"></span>
       </section>
