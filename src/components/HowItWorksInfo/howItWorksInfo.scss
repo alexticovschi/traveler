@@ -27,6 +27,10 @@
     display: grid;
     grid-template-rows: min-content min-content;
 
+    @media screen and (max-width: 750px) {
+      border: none;
+    }
+
     &--1 {
       grid-column: 1 / span 2;
     }
