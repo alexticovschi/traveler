@@ -13,7 +13,6 @@ const getTours = graphql`
           name
           price
           slug
-          country
           contentful_id
           days
           departure
