@@ -20,7 +20,7 @@ const TitleWrapper = styled.div`
     color: var(--primaryColor);
 
     @media screen and (max-width: 500px) {
-      font-size: 2.6rem;
+      font-size: 3.2rem;
       margin: 0 1.3rem 3rem;
     }
   }
