@@ -1,6 +1,6 @@
 import React from "react"
 import Title from "../Title/Title"
-import Tour from "../Tour/Tour"
+import TourCard from "../TourCard/TourCard"
 import { useStaticQuery, graphql } from "gatsby"
 
 import "./tours.scss"
@@ -34,16 +34,16 @@ const Tours = () => {
   const tours = response.tours.edges
 
   return (
-    <div className="tours-wrapper">
+    <section className="tours-container mt">
       <Title title="Choose your dream tour" />
-      <div className="container">
-        <section className="tours">
+      <div className="grid-container">
+        <div className="tours">
           {tours.map(({ node }) => (
-            <Tour key={node.contentful_id} tour={node} />
+            <TourCard key={node.contentful_id} tour={node} />
           ))}
-        </section>
+        </div>
       </div>
-    </div>
+    </section>
   )
 }
 

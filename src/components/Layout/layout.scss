@@ -100,11 +100,15 @@ p {
   color: var(--darkGrey);
 }
 
-.container {
+.grid-container {
   display: grid;
   grid-template-columns:
     [full-start] minmax(6rem, 1fr) [center-start] repeat(8,
       [col-start] minmax(min-content, 17.6rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+  @media only screen and (max-width: 500px) {
+    padding: 0 2rem;
+  }
 }
 
 .defaultHero {
@@ -172,11 +176,18 @@ main {
   }
 }
 
-
 .error {
   background: var(--primaryColor);
   min-height: calc(100vh - 62px);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.mt {
+  @media screen and (min-width: 750px) {
+    margin-top: 14rem;
+  }
+
+  margin-top: 5rem;
 }

@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito:900&display=swap');
-
 .tour-card {
   position: relative;
   display: grid;
@@ -8,6 +6,8 @@
   user-select: none;
   box-shadow: var(--mainBoxShadow);
   border: 1px solid var(--mainGrey);
+  border-radius: var(--mainBorderRadius);
+
 
   @media screen and (max-width: 900px) {
     grid-template-rows: 1fr 8rem 3rem;
@@ -35,7 +35,7 @@
 
   &__duration-days {
     height: 38px;
-    font-family: "Nunito";
+    font-family: var(--mainFont);
     font-weight: bold;
     font-size: 1.7rem;
     color: var(--mainWhite);
@@ -54,7 +54,7 @@
     letter-spacing: 1px;
     text-align: center;
     font-size: 1.1rem;
-    font-family: "Nunito";
+    font-family: var(--mainFont);
     margin-top: -1.1rem;
   }
 
@@ -84,7 +84,7 @@
     margin: 0;
     padding: 2rem 2rem 0;
     font-size: 2.1rem;
-    color: rgb(63, 63, 63);
+    color: var(--darkGrey);
     height: 100%;
     text-align: center;
     display: flex;
@@ -116,7 +116,7 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 1.32rem;
-    font-family: "Nunito";
+    font-family: var(--mainFont);
     font-weight: bold;
     color: var(--primaryColor);
 

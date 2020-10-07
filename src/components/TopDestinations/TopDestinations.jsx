@@ -29,17 +29,17 @@ const TopDestinations = () => {
   const deals = response.deals.edges
 
   return (
-    <div className="destinations-wrapper">
+    <section className="section-top-destinations mt">
       <Title title="Top Destinations" />
 
-      <div className="container">
-        <section className="destinations">
+      <div className="grid-container">
+        <div className="top-destinations">
           {deals.map(({ node }) => (
             <OfferCard key={node.title} deal={node} />
           ))}
-        </section>
+        </div>
       </div>
-    </div>
+    </section>
   )
 }
 

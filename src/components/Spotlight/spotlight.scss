@@ -1,10 +1,4 @@
 .spotlight {
-  margin-bottom: 12rem;
-
-  @media screen and (max-width: 500px) {
-    margin-bottom: 8rem;
-  }
-
   &__special-and-news {
     grid-column: center-start / center-end;
 
@@ -22,7 +16,6 @@
 
     @media screen and (max-width: 500px) {
       grid-column: full-start / full-end;
-      margin: 0 2rem;
     }
   }
 

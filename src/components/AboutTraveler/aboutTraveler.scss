@@ -1,18 +1,22 @@
 .about-container {
   grid-column: center-start / center-end;
-  margin: 8rem 0;
 
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, 1fr);
-  grid-row-gap: 4rem;
+  grid-row-gap: 5rem;
+  grid-column-gap: 2rem;
 
   @media only screen and (max-width: 1050px) {
     grid-column: full-start / full-end;
-    margin: 6rem 2rem;
+    margin: 0 2rem;
   }
 
-  .about-section {
+  @media only screen and (max-width: 500px) {
+    margin: 0;
+  }
+
+  .about {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     height: 35rem;
@@ -67,6 +71,8 @@
       height: 35rem;
       display: block;
       object-fit: cover;
+      border-radius: var(--mainBorderRadius);
+
 
       @media only screen and (max-width: 1200px) {
         height: 40rem;
@@ -101,7 +107,9 @@
         color: var(--primaryColor);
         display: flex;
         align-self: center;
-        margin: 0;
+        margin: 0 auto;
+        text-align: center;
+        text-transform: capitalize;
       }
 
       .text {

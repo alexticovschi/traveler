@@ -45,8 +45,8 @@ const BlogContent = ({ title, published, text: { json } }) => {
   const response = useStaticQuery(getPosts)
   const posts = response.posts.edges
   return (
-    <div className="container">
-      <section className="blog-section">
+    <section className="section-blog grid-container mt">
+      <section className="blog-container">
         <article className="blog">
           <h1 className="blog__title">{title}</h1>
           <p className="blog__published">Posted on {published}</p>
@@ -56,7 +56,7 @@ const BlogContent = ({ title, published, text: { json } }) => {
         </article>
         <RecentPosts posts={posts} />
       </section>
-    </div>
+    </section>
   )
 }
 

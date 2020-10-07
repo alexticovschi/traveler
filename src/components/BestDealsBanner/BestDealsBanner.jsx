@@ -3,8 +3,8 @@ import "./bestDealsBanner.scss"
 
 const BestDealsBanner = () => {
   return (
-    <section className="best-deals-banner">
-      <div className="container">
+    <section className="section-best-deals-banner best-deals-banner mt">
+      <div className="grid-container">
         <div className="best-deals-banner__wrapper">
           <div className="best-deals-banner__bl">
             <h4 className="best-deals-banner__title">

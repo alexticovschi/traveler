@@ -1,6 +1,6 @@
 import React from "react"
 import Title from "../Title/Title"
-import Card from "../Card/Card"
+import PopularToursCard from "../PopularToursCard/PopularToursCard"
 import { useStaticQuery, graphql } from "gatsby"
 
 import "./popularTours.scss"
@@ -32,25 +32,27 @@ const PopularTours = () => {
   const featuredTours = response.featuredTours.edges
 
   return (
-    <div className="popular-tours-wrapper">
-      <Title title="Popular tours" />
+    <section className="section-popular-tours mt">
+      <div className="grid-container">
+        <div className="popular-tours-container">
+          <Title title="Popular tours" />
 
-      <div className="container">
-        <section className="popular-tours">
-          {featuredTours.map(({ node }) => (
-            <Card
-              key={node.contentful_id}
-              imgSrc={node.images}
-              title={node.title}
-              slug={node.slug}
-              price={node.price}
-              days={node.days}
-              departure={node.departure}
-            />
-          ))}
-        </section>
+          <div className="popular-tours">
+            {featuredTours.map(({ node }) => (
+              <PopularToursCard
+                key={node.contentful_id}
+                imgSrc={node.images}
+                title={node.title}
+                slug={node.slug}
+                price={node.price}
+                days={node.days}
+                departure={node.departure}
+              />
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   )
 }
 

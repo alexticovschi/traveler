@@ -85,7 +85,7 @@
         font-size: 1.6rem;
         margin: 0 0 1rem;
         padding: 0;
-        font-family: "Nunito", sans-serif;
+        font-family: var(--mainFont);
         color: var(--darkGrey);
         transition: var(--mainTransition);
 
@@ -127,10 +127,11 @@
   &__form-input {
     flex-grow: 1;
     font-size: 1.4rem;
-    background-color: #f1f1f1;
+    background-color: var(--mainWhite);
     border: 0;
     padding: 0rem 1.2rem;
     width: 100%;
+    border-radius: var(--mainBorderRadius);
   }
 
   &__form-btn {
@@ -142,7 +143,7 @@
     letter-spacing: var(--mainSpacing);
     padding: 1.5rem 2.5rem;
     font-size: 1.3rem;
-    font-family: "Nunito", sans-serif;
+    font-family: var(--mainFont);
     font-weight: bolder;
     transition: var(--mainTransition);
     background: var(--primaryColor);

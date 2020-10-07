@@ -1,16 +1,5 @@
-.deals-savings-wrapper {
-  height: 100%;
-  margin: 10rem 0;
-
-  @media screen and (max-width: 500px) {
-    margin: 6rem 0;
-  }
-}
-
 .deals-savings {
   grid-column: center-start / center-end;
-  margin: 8rem 0;
-  height: auto;
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -26,7 +15,6 @@
 
   @media only screen and (max-width: 500px) {
     grid-column: full-start / full-end;
-    margin: 0 2rem;
   }
 
 

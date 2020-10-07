@@ -74,7 +74,7 @@
     letter-spacing: var(--mainSpacing);
     padding: 1.5rem 2.5rem;
     font-size: 1.3rem;
-    font-family: "Nunito", sans-serif;
+    font-family: var(--mainFont);
     font-weight: bolder;
     transition: var(--mainTransition);
     background: var(--primaryColor);

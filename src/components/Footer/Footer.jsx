@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-primary">
-        <div className="container">
+        <div className="grid-container">
           <div className="footer-primary__wrapper">
             <div className="footer-primary__col footer-primary__col--1">
               <div className="footer-primary__sub1">

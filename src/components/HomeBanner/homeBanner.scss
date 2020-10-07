@@ -1,12 +1,13 @@
-.home-banner {
-  position: relative;
-  grid-column: center-start / center-end;
-  margin-top: 10rem;
-  color: var(--mainWhite);
-
+.section-home-banner {
   @media screen and (max-width: 760px) {
     display: none;
   }
+}
+
+.home-banner {
+  position: relative;
+  grid-column: center-start / center-end;
+  color: var(--mainWhite);
 
   &__text-box {
     background: var(--primaryColor);
@@ -30,7 +31,7 @@
   }
 
   &__text {
-    font-family: "Nunito";
+    font-family: var(--mainFont);
     font-weight: 300;
     font-size: 1.6rem;
     color: var(--mainWhite);
@@ -40,5 +41,6 @@
     width: 100%;
     height: 50rem;
     object-fit: cover;
+    border-radius: var(--mainBorderRadius);
   }
 }

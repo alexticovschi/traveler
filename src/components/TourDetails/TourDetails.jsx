@@ -1,8 +1,8 @@
 import React from "react"
-import "./tourDetails.scss"
 import map from "../../images/europe.svg"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Image from "gatsby-image"
+import "./tourDetails.scss"
 
 const TourDetails = ({
   name,
@@ -14,12 +14,12 @@ const TourDetails = ({
   itinerary,
 }) => {
   return (
-    <section className="tour-section">
-      <div className="tour-section__details">
-        <h2 className="tour-section__details__name">{name}</h2>
-        <p className="tour-section__details__text">{description}</p>
+    <section className="section-tour mt">
+      <div className="section-tour__details">
+        <h2 className="section-tour__details__name">{name}</h2>
+        <p className="section-tour__details__text">{description}</p>
       </div>
-      <div className="tour-section__trip-box">
+      <div className="section-tour__trip-box">
         <div className="trip-box">
           <figure className="trip-box__figure">
             <img className="trip-box__image" src={map} alt="europe map" />
@@ -55,7 +55,7 @@ const TourDetails = ({
           </p>
         </div>
       </div>
-      <section className="tour-section__highlights">
+      <div className="section-tour__highlights">
         <div className="highlight-box-container">
           <h2 className="hightlight-title">Highlights</h2>
           {highlights.map(highlight => (
@@ -76,8 +76,8 @@ const TourDetails = ({
             </div>
           ))}
         </div>
-      </section>
-      <section className="tour-section__itinerary">
+      </div>
+      <div className="section-tour__itinerary">
         <h2 className="itinerary-title">Itinerary</h2>
         <div className="itinerary__tabs">
           {itinerary.map((it, idx) => (
@@ -97,7 +97,7 @@ const TourDetails = ({
             </div>
           ))}
         </div>
-      </section>
+      </div>
     </section>
   )
 }

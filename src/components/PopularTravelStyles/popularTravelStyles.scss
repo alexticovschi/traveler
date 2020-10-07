@@ -1,15 +1,13 @@
-.popular-travel-styles-wrapper {
-  margin: 10rem 0;
+.popular-travel-styles-container {
+  grid-column: center-start / center-end;
 
   @media screen and (max-width: 500px) {
-    margin: 8rem 0;
+    grid-column: full-start / full-end;
   }
 }
 
+
 .popular-travel-styles {
-  grid-column: center-start / center-end;
-  height: 100%;
-  padding: 4rem 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2.5rem;
@@ -24,7 +22,6 @@
 
   @media screen and (max-width: 500px) {
     grid-column: full-start / full-end;
-    margin: 0 2rem;
     padding: 0 0 2rem 0;
   }
 }

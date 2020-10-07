@@ -27,7 +27,7 @@ const DealTemplate = ({ data }) => {
       <div className="wrapper">
         <Title title="Explore our Deals" />
 
-        <div className="container">
+        <div className="grid-container">
           <section className="tours">
             {data.deals.edges.map(({ node }) => (
               <TourDeal key={node.id} tour={node} />

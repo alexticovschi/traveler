@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito:900&display=swap');
-
 .tour-deal {
   position: relative;
   display: grid;
@@ -35,7 +33,7 @@
 
   &__duration-days {
     height: 38px;
-    font-family: "Nunito";
+    font-family: var(--mainFont);
     font-weight: bold;
     font-size: 1.7rem;
     color: var(--mainWhite);
@@ -54,7 +52,7 @@
     letter-spacing: 1px;
     text-align: center;
     font-size: 1.1rem;
-    font-family: "Nunito";
+    font-family: var(--mainFont);
     margin-top: -1.1rem;
   }
 
@@ -116,7 +114,7 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 1.32rem;
-    font-family: "Nunito";
+    font-family: var(--mainFont);
     font-weight: bold;
     color: var(--primaryColor);
 
@@ -174,7 +172,7 @@
     width: 100%;
 
     &:hover {
-      background-color: #0ba889;
+      background-color: var(--primaryColor2);
       color: var(--mainWhite);
     }
 

@@ -28,17 +28,19 @@ const PopularTravelStyles = () => {
   const popularTravelStyles = response.popularTravelStyles.edges
 
   return (
-    <div className="popular-travel-styles-wrapper">
-      <Title title="Popular Travel Styles" />
+    <section className="section-popular-travel-styles mt">
+      <div className="grid-container">
+        <div className="popular-travel-styles-container">
+          <Title title="Popular Travel Styles" />
 
-      <div className="container">
-        <section className="popular-travel-styles">
-          {popularTravelStyles.map(({ node }) => (
-            <TravelStyleCard key={node.title} deal={node} />
-          ))}
-        </section>
+          <div className="popular-travel-styles">
+            {popularTravelStyles.map(({ node }) => (
+              <TravelStyleCard key={node.title} deal={node} />
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   )
 }
 

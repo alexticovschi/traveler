@@ -4,16 +4,10 @@ import Image from "gatsby-image"
 
 import "./tourCard.scss"
 
-const TourCard = ({
-  name,
-  price,
-  slug,
-  days,
-  image,
-  departure,
-  discount,
-  offer,
-}) => {
+const TourCard = ({ tour }) => {
+  const { name, price, days, slug, images, departure, offer, discount } = tour
+  let image = images[0].fluid
+
   let reduced = (price * parseFloat(discount)) / 100.0
   let newPrice = price - reduced
 

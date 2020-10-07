@@ -53,8 +53,8 @@ class Form extends Component {
     ]
 
     return (
-      <div className="container">
-        <section className="contact-form">
+      <section className="section-contact-form grid-container mt">
+        <div className="contact-form">
           <div className="contact-form__box-left">
             <h2 className="contact-form__box-left__title">Give Us A Call</h2>
 
@@ -161,8 +161,8 @@ class Form extends Component {
 
             <button className="btn-primary form__btn">Submit</button>
           </form>
-        </section>
-      </div>
+        </div>
+      </section>
     )
   }
 }

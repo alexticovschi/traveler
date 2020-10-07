@@ -9,8 +9,8 @@ import "./dealsAndSavings.scss"
 
 const DealsAndSavings = () => {
   return (
-    <section className="deals-saving-wrapper">
-      <div className="container">
+    <section className="section-deals-saving mt">
+      <div className="grid-container">
         <div className="deals-savings">
           <div className="deals-savings__deal">
             <div className="deals-savings__deal-top">

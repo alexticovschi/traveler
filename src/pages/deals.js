@@ -34,8 +34,8 @@ const deals = ({ data }) => {
         <Banner
           className="banner"
           title="Travel is always a good idea"
-        ></Banner>{" "}
-      </StyledHero>{" "}
+        ></Banner>
+      </StyledHero>
       <TopDestinations />
       <DealsAndSavings />
       <TopOffers />

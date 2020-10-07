@@ -30,16 +30,18 @@ const Blogs = () => {
   const response = useStaticQuery(getPosts)
   const posts = response.posts.edges
   return (
-    <div className="container">
-      <section className="blog-list-section">
-        <div>
-          {posts.map(({ node }) => (
-            <BlogCard {...node} key={node.id} />
-          ))}
+    <section className="section-blogs mt">
+      <div className="grid-container">
+        <div className="blog-list">
+          <div>
+            {posts.map(({ node }) => (
+              <BlogCard {...node} key={node.id} />
+            ))}
+          </div>
+          <RecentPosts posts={posts} />
         </div>
-        <RecentPosts posts={posts} />
-      </section>
-    </div>
+      </div>
+    </section>
   )
 }
 

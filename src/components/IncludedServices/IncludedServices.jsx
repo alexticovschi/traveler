@@ -9,8 +9,8 @@ import "./includedServices.scss"
 
 const IncludedServices = () => {
   return (
-    <div className="container">
-      <section className="included-services">
+    <section className="section-included-services grid-container mt">
+      <div className="included-services">
         <Title title="What’s included on every Traveler tour" />
 
         <div className="included-services__list">
@@ -59,8 +59,8 @@ const IncludedServices = () => {
             <h2 className="included-services__title">Breakfast Everyday</h2>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   )
 }
 

@@ -1,10 +1,8 @@
 .included-services {
   grid-column: center-start / center-end;
-  margin: 10rem 0;
 
   @media only screen and (max-width: 500px) {
     grid-column: full-start / full-end;
-    margin: 6rem 2rem;
   }
 
   &__list {
@@ -52,5 +50,4 @@
       font-size: 1.4rem;
     }
   }
-
 }

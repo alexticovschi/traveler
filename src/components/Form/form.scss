@@ -2,8 +2,7 @@
   grid-column: center-start / center-end;
   display: grid;
   grid-template-columns: 1fr 1.7fr;
-
-  margin: 8rem 0 12rem 0;
+  grid-column-gap: 2rem;
 
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
@@ -11,7 +10,6 @@
 
   @media (max-width: 500px) {
     grid-column: full-start / full-end;
-    margin: 3rem 2rem 8rem 2rem;
   }
 
   &__phone {
@@ -31,13 +29,11 @@
     grid-template-rows: 1fr 0.6fr 1fr 3fr;
 
     @media (max-width: 900px) {
-      grid-template-rows: 1fr 0.6fr 1fr 1fr;
-
+      grid-template-rows: min-content 0.6fr 1fr 1fr;
       grid-row-gap: 2rem;
     }
 
     &__title {
-      padding-top: 3rem;
       font-size: 3rem;
       color: var(--darkGrey);
       color: var(--primaryColor);
@@ -57,17 +53,12 @@
     }
 
     @media (max-width: 500px) {
+
       &__address,
       &__phone-email,
       &__info {
         font-size: 1.5rem;
       }
-    }
-
-    &__address {
-    }
-
-    &__phone-email {
     }
 
     &__info {
@@ -82,7 +73,6 @@
 
 .form {
   &__title {
-    padding: 3rem 0;
     font-size: 3rem;
     color: var(--darkGrey);
     color: var(--primaryColor);
@@ -92,7 +82,6 @@
 
     @media (max-width: 900px) {
       text-align: left;
-      padding: 1rem 0;
     }
 
     @media (max-width: 500px) {
@@ -102,10 +91,25 @@
   }
 
   .select {
+    background-color: var(--mainWhite) !important;
+    border: none !important;
+
+    .css-1ynx01x-control {
+      border: 0.1rem solid var(--lightGrey) !important;
+      border-radius: var(--mainBorderRadius) !important;
+    }
+  }
+
+  .select {
     text-align: left;
     width: 100%;
     font-size: 1.4rem;
     z-index: 1000;
+    border: none !important;
+
+    & * div[class^="css"] {
+      padding: .75rem;
+    }
   }
 
   &__btn {

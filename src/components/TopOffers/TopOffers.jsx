@@ -6,15 +6,15 @@ import "./topOffers.scss"
 
 const TopOffers = () => {
   return (
-    <div className="top-offers-wrapper">
+    <section className="section-top-offers mt">
       <Title title="Top Offers" />
 
-      <div className="container">
+      <div className="grid-container">
         <section className="top-offers">
           <Slider />
         </section>
       </div>
-    </div>
+    </section>
   )
 }
 

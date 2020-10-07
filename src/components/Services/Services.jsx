@@ -12,10 +12,11 @@ import "./services.scss"
 
 const Services = () => {
   return (
-    <div className="services-wrapper">
-      <Title title="getting adventure with services" />
-      <div className="container">
-        <section className="services">
+    <section className="section-services mt">
+      <div className="grid-container">
+        <div className="services-container">
+          <Title title="getting adventure with services" />
+
           <div className="service">
             <img className="service__icon" src={plane} alt="plane" />
             <h4 className="service__title">Air Ticketing</h4>
@@ -72,9 +73,9 @@ const Services = () => {
               your dreams.
             </p>
           </div>
-        </section>
+        </div>
       </div>
-    </div>
+    </section>
   )
 }
 

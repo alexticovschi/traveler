@@ -1,16 +1,10 @@
-.top-offers-wrapper {
-  margin: 6rem 0;
-}
-
 .top-offers {
   display: grid;
   grid-column: center-start / center-end;
-  margin: 4rem 0;
   height: auto;
 
   @media only screen and (max-width: 500px) {
     grid-column: full-start / full-end;
-    margin: 0 2rem 2rem;
   }
 
   &__img-wrapper {

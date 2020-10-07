@@ -12,23 +12,23 @@ const Title = ({ title, subtitle }) => {
 
 const TitleWrapper = styled.div`
   .title {
-    text-transform: uppercase;
+    text-transform: capitalize;
     text-align: center;
-    font-size: 3rem;
+    font-size: 4rem;
     font-family: "Nunito";
     font-weight: bold;
     color: var(--primaryColor);
 
     @media screen and (max-width: 500px) {
       font-size: 2.6rem;
-      margin: 0 1.2rem 3rem;
+      margin: 0 1.3rem 3rem;
     }
   }
   .subtitle {
     text-align: center;
     font-size: 1.7rem;
     font-family: "Nunito";
-    margin-bottom: 4rem;
+    margin-bottom: 4.5rem;
 
     @media screen and (max-width: 500px) {
       font-size: 1.6rem;

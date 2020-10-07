@@ -10,22 +10,22 @@
 
   &__title {
     font-family: Nexa-Rust-2;
-    font-size: 3.3rem;
+    font-size: 4rem;
     font-weight: 1200;
     text-transform: uppercase;
     margin-bottom: 2rem;
     padding: 0 1rem;
-    letter-spacing: 6px;
+    letter-spacing: var(--mainSpacing);
   }
 
   &__info {
     width: 85%;
-    letter-spacing: 6px;
     font-size: 2rem;
     margin: 0 auto;
     margin-bottom: 2rem;
     color: var(--mainWhite);
     font-weight: 700;
+    letter-spacing: var(--mainSpacing);
     text-transform: capitalize;
   }
 

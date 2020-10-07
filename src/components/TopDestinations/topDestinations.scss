@@ -1,14 +1,5 @@
-.destinations-wrapper {
-  margin: 10rem 0;
-
-  @media screen and (max-width: 500px) {
-    margin: 8rem 0;
-  }
-}
-
-.destinations {
+.top-destinations {
   grid-column: center-start / center-end;
-  padding: 4rem 0;
   height: 100%;
 
   display: grid;
@@ -25,7 +16,5 @@
 
   @media screen and (max-width: 500px) {
     grid-column: full-start / full-end;
-    margin: 0 2rem;
-    padding: 0 0 2rem 0;
   }
 }

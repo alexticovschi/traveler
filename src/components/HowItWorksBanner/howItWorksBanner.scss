@@ -1,13 +1,11 @@
 .how-it-works-banner {
   position: relative;
   grid-column: center-start / center-end;
-  margin: 10rem 0;
   grid-template-rows: 11rem 7rem;
   grid-row-gap: 2rem;
 
   @media only screen and (max-width: 500px) {
     grid-column: full-start / full-end;
-    margin: 6rem 2rem;
   }
 
   &__content {
@@ -32,16 +30,11 @@
     }
   }
 
-
   &__img {
     border-radius: var(--mainBorderRadius);
     width: 100%;
     height: 29rem;
     object-fit: cover;
-  }
-
-  &__btn-wrapper {
-    padding: 1rem;
   }
 
   &__btn {
@@ -51,6 +44,11 @@
 
     @media screen and (max-width: 900px) {
       font-size: 1.5rem;
+    }
+
+    @media screen and (max-width: 500px) {
+      width: 60%;
+      font-size: 1.4rem;
     }
   }
 

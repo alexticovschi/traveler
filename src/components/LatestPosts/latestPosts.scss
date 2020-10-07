@@ -1,18 +1,9 @@
 .latest-posts {
-  margin-top: 8rem;
-
-  margin-bottom: 12rem;
-
-  @media only screen and (max-width: 500px) {
-    margin-bottom: 6rem;
-  }
-
   .posts {
     grid-column: center-start / center-end;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 2rem;
-    margin-top: 3rem;
 
     @media only screen and (max-width: 950px) {
       grid-template-columns: repeat(2, 1fr);
@@ -25,7 +16,6 @@
 
     @media only screen and (max-width: 500px) {
       grid-column: full-start / full-end;
-      margin: 0 2rem;
     }
   }
 }

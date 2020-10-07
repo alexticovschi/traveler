@@ -1,4 +1,4 @@
-.card {
+.popular-tours-card {
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
@@ -14,7 +14,7 @@
   }
 
   @media (max-width: 500px) {
-    grid-template-rows: 1fr 2rem 1rem 1rem;
+    grid-template-rows: 1fr repeat(2, min-content min-content);
   }
 
   &__duration-text,
@@ -22,7 +22,7 @@
   &__title,
   &__price,
   &__departure {
-    font-family: "Nunito";
+    font-family: var(--mainFont);
     font-weight: bold;
     letter-spacing: var(--mainSpacing);
     margin: 0;

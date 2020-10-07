@@ -32,17 +32,19 @@ const LatestPosts = () => {
   const response = useStaticQuery(getPosts)
   const posts = response.posts.edges
   return (
-    <div className="latest-posts">
-      <Title title="Latest Posts from Blog" />
+    <section className="section-latest-posts mt">
+      <div className="latest-posts">
+        <Title title="Latest Posts from Blog" />
 
-      <div className="container">
-        <section className="posts">
-          {posts.map(({ node }) => (
-            <LatestPostCard key={node.id} post={node} />
-          ))}
-        </section>
+        <div className="grid-container">
+          <section className="posts">
+            {posts.map(({ node }) => (
+              <LatestPostCard key={node.id} post={node} />
+            ))}
+          </section>
+        </div>
       </div>
-    </div>
+    </section>
   )
 }
 
