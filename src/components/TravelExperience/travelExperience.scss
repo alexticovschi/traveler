@@ -1,14 +1,11 @@
 .travel-experiences {
   grid-column: center-start / center-end;
-  margin: 10rem 0;
 
   @media only screen and (max-width: 500px) {
     grid-column: full-start / full-end;
-    margin: 6rem 2rem;
   }
 
   &__wrapper {
-    margin-top: 5rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     grid-column-gap: 1.6rem;
