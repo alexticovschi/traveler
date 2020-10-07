@@ -13,10 +13,10 @@ import "./services.scss"
 const Services = () => {
   return (
     <section className="section-services mt">
+      <Title title="getting adventure with services" />
+
       <div className="grid-container">
         <div className="services-container">
-          <Title title="getting adventure with services" />
-
           <div className="service">
             <img className="service__icon" src={plane} alt="plane" />
             <h4 className="service__title">Air Ticketing</h4>
