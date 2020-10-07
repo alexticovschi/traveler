@@ -45,7 +45,7 @@ const WhyUs = () => {
     <section className="section-why-us mt">
       <div className="grid-container">
         <section className="why-us">
-          <Title title="Why Traveler?" />
+          <Title title="Why Traveler" />
 
           <div className="why-us__container">
             <div className="why-us-card">
