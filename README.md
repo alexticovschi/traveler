@@ -56,7 +56,7 @@
 
 ## Project Description
 
-This is a Travel and Tourism Website. Choose your destination and explore cultures, landscapes, wildlife and communities from Asia to Africa, the Arctic to the Americas.
+A JAMstack app built with Gatsby that fetches tour data from Contenful API. Designed to be a Travel and Tourism website app.
 
 ## Tools Used
 
