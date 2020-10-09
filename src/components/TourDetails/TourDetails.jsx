@@ -12,7 +12,13 @@ const TourDetails = ({
   highlights,
   departure,
   itinerary,
+  discount,
+  offer,
 }) => {
+  const reduced = (price * parseFloat(discount)) / 100.0
+  const newPrice = price - reduced
+  const perDay = !offer ? price / days : newPrice / days
+
   return (
     <section className="section-tour mt">
       <div className="section-tour__details">
@@ -27,6 +33,11 @@ const TourDetails = ({
               <span className="trip-box__duration-days">{days}</span>
               <span className="trip-box__duration-text">days</span>
             </figcaption>
+            {discount ? (
+              <div className="trip-box__badge-wrapper">
+                <span className="trip-box__badge">-{discount}%</span>
+              </div>
+            ) : null}
           </figure>
           <h2 className="trip-box__title">{name}</h2>
           <h5 className="trip-box__subtitle">Departs {departure}</h5>
@@ -35,13 +46,30 @@ const TourDetails = ({
               <span className="title">Days</span>
               <span className="subtitle">{days}</span>
             </div>
-            <div className="trip-box__price">
-              <span className="title">Price From</span>
-              <span className="subtitle">&pound;{price} GBP</span>
+            <div className="trip-box__price-offer">
+              <div className="trip-box__prices">
+                <div className="title">Price From</div>
+                {!offer ? (
+                  <span className="subtitle">&pound;{price}</span>
+                ) : (
+                  <div>
+                    <span className="trip-box__old-price subtitle">
+                      &pound;{price}
+                    </span>{" "}
+                    &pound;
+                    {parseInt(newPrice)}
+                  </div>
+                )}
+              </div>
+              {discount ? (
+                <div className="trip-box__savings">
+                  You Save: &pound;{parseInt(reduced)}
+                </div>
+              ) : null}
             </div>
             <div className="trip-box__per-day">
               <span className="title">Per Day</span>
-              <span className="subtitle">&pound;125 GBP</span>
+              <span className="subtitle">&pound;{perDay.toFixed(2)}</span>
             </div>
           </div>
           <div className="trip-box__availability">

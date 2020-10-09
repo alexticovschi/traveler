@@ -18,6 +18,8 @@ const TourTemplate = ({ data }) => {
     images,
     highlights,
     itinerary,
+    discount,
+    offer,
   } = data.tour
   return (
     <Layout>
@@ -31,6 +33,8 @@ const TourTemplate = ({ data }) => {
         highlights={highlights}
         departure={departure}
         itinerary={itinerary}
+        discount={discount}
+        offer={offer}
       />
       <IncludedServices />
       <WhyUs />
@@ -50,6 +54,7 @@ export const query = graphql`
       description {
         description
       }
+      discount
       itinerary {
         day
         info
@@ -67,6 +72,7 @@ export const query = graphql`
         title
         description
       }
+      offer
     }
   }
 `
