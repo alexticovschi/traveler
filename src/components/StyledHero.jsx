@@ -1,12 +1,16 @@
 import React from "react"
 import styled from "styled-components"
 import BackgroundImage from "gatsby-background-image"
+import SubBanner from "./SubBanner/SubBanner"
 
 const StyledHero = ({ img, className, children, home }) => {
   return (
-    <BackgroundImage className={className} fluid={img} home={home}>
-      {children}
-    </BackgroundImage>
+    <>
+      <BackgroundImage className={className} fluid={img} home={home}>
+        {children}
+      </BackgroundImage>
+      <SubBanner />
+    </>
   )
 }
 

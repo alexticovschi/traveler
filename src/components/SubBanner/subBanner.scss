@@ -1,0 +1,21 @@
+.sub-banner {
+  grid-column: full-start / full-end;
+  background-color: var(--primaryColor);
+
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  align-items: center;
+  justify-content: center;
+  grid-column-gap: 2rem;
+  padding: 2.9rem 0;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  &__heading {
+    font-size: 2rem;
+    color: var(--mainWhite);
+    margin: 0;
+  }
+}
