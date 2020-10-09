@@ -49,7 +49,7 @@ exports.createPages = async ({ graphql, actions }) => {
   data.deals.edges.forEach(({ node }) => {
     createPage({
       path: `deals/${node.slug}`,
-      component: path.resolve("./src/templates/deals-template.js"),
+      component: path.resolve("./src/templates/deal-template.js"),
       context: {
         slug: node.slug,
       },

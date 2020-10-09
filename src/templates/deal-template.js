@@ -9,15 +9,12 @@ import PopularTours from "../components/PopularTours/PopularTours"
 import SEO from "../components/SEO"
 
 const DealTemplate = ({ data }) => {
-  const { title, discount } = data.deal.edges[0].node
+  const { title, discount, heroImage } = data.deal.edges[0].node
 
   return (
     <Layout>
       <SEO title={`${title} Deals`} description={`${title} - Deals page`} />
-      <StyledHero
-        opacity="true"
-        img={data.dealsHeroImage.childImageSharp.fluid}
-      >
+      <StyledHero opacity="true" img={heroImage.fluid}>
         <Banner className="banner" title={`${title} Deals`}>
           <div className="banner__discount">
             <span>UP TO {discount}% OFF</span>
@@ -83,13 +80,11 @@ export const query = graphql`
         node {
           title
           discount
-        }
-      }
-    }
-    dealsHeroImage: file(relativePath: { eq: "dealsHero.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 4140) {
-          ...GatsbyImageSharpFluid_withWebp
+          heroImage {
+            fluid {
+              ...GatsbyContentfulFluid
+            }
+          }
         }
       }
     }
