@@ -6,6 +6,7 @@
   user-select: none;
   box-shadow: var(--mainBoxShadow);
   border: 1px solid var(--mainGrey);
+  border-radius: var(--mainBorderRadius);
 
   @media screen and (max-width: 900px) {
     grid-template-rows: 1fr 8rem 3rem;

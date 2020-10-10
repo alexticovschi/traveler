@@ -80,7 +80,11 @@
 
       @media only screen and (max-width: 450px) {
         grid-template-rows: 30rem min-content 2rem 8rem 6rem 7rem;
-        grid-template-columns: 1fr;
+        grid-template-columns: .7rem auto .7rem;
+      }
+
+      @media only screen and (max-width: 350px) {
+        grid-template-columns: .4rem auto .4rem;
       }
 
       &__duration {
