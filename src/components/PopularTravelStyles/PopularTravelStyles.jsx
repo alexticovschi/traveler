@@ -12,6 +12,7 @@ const getPopularTravelStyles = graphql`
           title
           discount
           totalDeals
+          slug
           image {
             fluid {
               ...GatsbyContentfulFluid

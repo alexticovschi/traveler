@@ -1,6 +1,6 @@
 import React from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import logo from "../../../images/svg/logo.svg"
+import logo from "../../../images/svg/logo-traveler.svg"
 
 import {
   FaFacebookF,
@@ -18,7 +18,6 @@ const Toolbar = ({ isOpen, drawerClickHandler }) => (
         <div className="toolbar__logo">
           <AniLink fade to="/">
             <img className="logo" src={logo} alt="logo" />
-            TRAVELER
           </AniLink>
         </div>
         <div className="spacer" />

@@ -69,7 +69,7 @@ const TourDetails = ({
             </div>
             <div className="trip-box__per-day">
               <span className="title">Per Day</span>
-              <span className="subtitle">&pound;{perDay.toFixed(2)}</span>
+              <span className="subtitle">&pound;{Math.round(perDay)}</span>
             </div>
           </div>
           <div className="trip-box__availability">

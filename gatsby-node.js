@@ -26,6 +26,13 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      travelStyle: allContentfulPopularTravelStyle {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
     }
   `)
   data.tours.edges.forEach(({ node }) => {
@@ -49,7 +56,16 @@ exports.createPages = async ({ graphql, actions }) => {
   data.deals.edges.forEach(({ node }) => {
     createPage({
       path: `deals/${node.slug}`,
-      component: path.resolve("./src/templates/deal-template.js"),
+      component: path.resolve("./src/templates/deals-template.js"),
+      context: {
+        slug: node.slug,
+      },
+    })
+  })
+  data.travelStyle.edges.forEach(({ node }) => {
+    createPage({
+      path: `deals/${node.slug}`,
+      component: path.resolve("./src/templates/travel-style-deals-template.js"),
       context: {
         slug: node.slug,
       },

@@ -8,9 +8,9 @@ import TourDeal from "../components/TourDeal/TourDeal"
 import PopularTours from "../components/PopularTours/PopularTours"
 import SEO from "../components/SEO"
 
-const DealTemplate = ({ data }) => {
-  const { title, discount, heroImage } = data.deal.edges[0].node
-
+const TravelStyleDealTemplate = ({ data }) => {
+  const { title, discount, heroImage } = data.travelStyle.edges[0].node
+  console.log(data)
   return (
     <Layout>
       <SEO title={`${title} Deals`} description={`${title} - Deals page`} />
@@ -22,7 +22,7 @@ const DealTemplate = ({ data }) => {
         </Banner>
       </StyledHero>
       <div className="wrapper">
-        <Title title="Explore our Deals" />
+        <Title title={`${title} Deals and Discounts`} />
 
         <div className="grid-container">
           <section className="tours">
@@ -39,9 +39,7 @@ const DealTemplate = ({ data }) => {
 
 export const query = graphql`
   query($slug: String!) {
-    deals: allContentfulTour(
-      filter: { continentSlug: { eq: $slug }, offer: { eq: true } }
-    ) {
+    deals: allContentfulTour(filter: {travelStyles: {elemMatch: {style: {eq: $slug}}}}) {
       edges {
         node {
           id
@@ -75,7 +73,7 @@ export const query = graphql`
         }
       }
     }
-    deal: allContentfulDeal(filter: { slug: { eq: $slug } }) {
+    travelStyle: allContentfulPopularTravelStyle(filter: { slug: { eq: $slug } }) {
       edges {
         node {
           title
@@ -91,4 +89,4 @@ export const query = graphql`
   }
 `
 
-export default DealTemplate
+export default TravelStyleDealTemplate

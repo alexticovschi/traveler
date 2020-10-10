@@ -4,10 +4,10 @@ import Image from "gatsby-image"
 import "./travelStyleCard.scss"
 
 const TravelStyleCard = ({ deal }) => {
-  const { title, discount, totalDeals, image } = deal
+  const { title, discount, totalDeals, image, slug } = deal
 
   return (
-    <AniLink fade to={`/deals`}>
+    <AniLink fade to={`/deals/${slug}`}>
       <figure className="travel-style-card">
         <Image
           fluid={image.fluid}

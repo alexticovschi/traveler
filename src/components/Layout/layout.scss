@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Fjalla+One|Noto+Serif&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,900&display=swap");
 
+@font-face {
+  font-family: "Nexa-Rust-2";
+  src: url("../../fonts/NexaRustSans-Black.otf");
+}
+
 :root {
   --primaryColor: #1abc9c;
   --primaryColor2: #0ba889;
@@ -169,11 +174,11 @@ main {
 }
 
 .wrapper {
-  margin: 10rem 0;
-
-  @media screen and (max-width: 500px) {
-    margin: 6rem 0;
+  @media screen and (min-width: 750px) {
+    margin-top: 13rem;
   }
+
+  margin-top: 5rem;
 }
 
 .error {
@@ -186,7 +191,7 @@ main {
 
 .mt {
   @media screen and (min-width: 750px) {
-    margin-top: 14rem;
+    margin-top: 13rem;
   }
 
   margin-top: 5rem;
