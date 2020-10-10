@@ -9,7 +9,7 @@ const HowItWorksBanner = () => {
 
   return (
     <section className="section-how-it-works-banner mt">
-      <div className="grid-container">
+      <div className="grid-container" style={{padding: 0}}>
         <div className="how-it-works-banner">
           <figure className="how-it-works-banner__img-wrapper">
             <Image
