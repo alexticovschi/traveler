@@ -121,33 +121,21 @@
 
     &__item {
       display: grid;
-      grid-template-columns: .1fr 2fr;
+      grid-template-columns: .8fr 2fr;
       border-radius: var(--mainBorderRadius);
       border: 1px solid var(--mainGrey);
       box-shadow: var(--mainBoxShadow);
       overflow: hidden;
       width: 100%;
-      min-height: 9rem;
+      height: 8vh;
       transition: .1s ease-in;
     }
 
     &__icon {
       background-color: var(--primaryColorLight);
       height: 100%;
-      padding: 3rem;
-
-      @media screen and (max-width: 1250px) {
-        padding: 2rem;
-      }
-
-      @media screen and (max-width: 576px) {
-        padding: 3rem;
-      }
-
-      @media screen and (max-width: 376px) {
-        width: 10rem;
-        padding: 0 3rem;
-      }
+      width: 100%;
+      padding: 3.3rem;
     }
   }
 }
