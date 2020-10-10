@@ -132,6 +132,8 @@
     padding: 0rem 1.2rem;
     width: 100%;
     border-radius: var(--mainBorderRadius);
+    border: 1px solid var(--mainGrey);
+    margin-right: .5rem;
   }
 
   &__form-btn {
