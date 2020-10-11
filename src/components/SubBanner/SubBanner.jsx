@@ -1,5 +1,5 @@
 import React from "react"
-import logo from "../../images/svg/logo-traveler-sub.svg"
+import logo from "../../images/svg/logo-globe-sub-banner.svg"
 
 import "./subBanner.scss"
 
